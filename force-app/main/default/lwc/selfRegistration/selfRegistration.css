@@ -1,0 +1,41 @@
+:host {
+    display: block;
+    max-width: 32rem;
+    margin: 2rem auto;
+}
+
+.registration-form {
+    padding: 0 1.25rem 1.25rem;
+}
+
+.intro {
+    color: #444;
+    margin: 0 0 1.25rem;
+}
+
+lightning-input,
+lightning-combobox {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.submit-button {
+    display: block;
+    margin-top: 1.25rem;
+}
+
+.message {
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+}
+
+.error {
+    background: #fef1ee;
+    color: #8e030f;
+}
+
+.success {
+    background: #eefaf3;
+    color: #194e31;
+}

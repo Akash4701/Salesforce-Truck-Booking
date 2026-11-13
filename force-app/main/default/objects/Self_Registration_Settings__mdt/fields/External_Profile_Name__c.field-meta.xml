@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Profile_Name__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <description>Legacy setting; registration now uses External Profile ID.</description>
+    <label>Legacy External Profile Name (Unused)</label>
+    <length>80</length>
+    <type>Text</type>
+</CustomField>

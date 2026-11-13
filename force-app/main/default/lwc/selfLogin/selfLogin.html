@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Sign in" icon-name="standard:people">
+        <div class="login-form">
+            <p class="intro">Sign in to your Truckbooking account.</p>
+
+            <form onsubmit={handleSubmit}>
+                <lightning-input
+                    name="email"
+                    type="email"
+                    label="Email"
+                    autocomplete="username"
+                    maxlength="80"
+                    required
+                ></lightning-input>
+                <lightning-input
+                    name="password"
+                    type="password"
+                    label="Password"
+                    autocomplete="current-password"
+                    required
+                ></lightning-input>
+
+                <template lwc:if={errorMessage}>
+                    <div class="message error" role="alert">{errorMessage}</div>
+                </template>
+
+                <lightning-button
+                    class="submit-button"
+                    type="submit"
+                    variant="brand"
+                    label={submitLabel}
+                    disabled={isSubmitting}
+                ></lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>

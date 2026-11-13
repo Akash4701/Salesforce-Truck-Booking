@@ -1,0 +1,62 @@
+<template>
+    <lightning-card title="Create your account" icon-name="standard:people">
+        <div class="registration-form">
+            <p class="intro">
+                Register to book or drive with Truckbooking. All fields are required.
+            </p>
+
+            <form onsubmit={handleSubmit}>
+                <lightning-input
+                    name="fullName"
+                    type="text"
+                    label="Name"
+                    autocomplete="name"
+                    maxlength="80"
+                    required
+                ></lightning-input>
+                <lightning-input
+                    name="email"
+                    type="email"
+                    label="Email"
+                    autocomplete="email"
+                    maxlength="80"
+                    required
+                ></lightning-input>
+                <lightning-input
+                    name="password"
+                    type="password"
+                    label="Password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    maxlength="80"
+                    message-when-too-short="Use at least 8 characters."
+                    required
+                ></lightning-input>
+                <lightning-combobox
+                    name="role"
+                    label="Role"
+                    value={selectedRole}
+                    placeholder="Select a role"
+                    options={roleOptions}
+                    onchange={handleRoleChange}
+                    required
+                ></lightning-combobox>
+
+                <template lwc:if={errorMessage}>
+                    <div class="message error" role="alert">{errorMessage}</div>
+                </template>
+                <template lwc:if={successMessage}>
+                    <div class="message success" role="status">{successMessage}</div>
+                </template>
+
+                <lightning-button
+                    class="submit-button"
+                    type="submit"
+                    variant="brand"
+                    label={submitLabel}
+                    disabled={isSubmitting}
+                ></lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>
